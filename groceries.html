@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>groceries</title>
+  <link rel="icon" type="image/x-icon" href="logo-leaf-new.png">
+  <link href="style.css" rel="stylesheet">
+
+  <!-----Bootstrap JavaScript Bundle (includes Popper.js):-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <!-----FOR ICONS-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/593f576760.js" crossorigin="anonymous"></script>
+
+  <!----Bootstrap CSS:-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <!-- jQuery CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!---JavaScript CDN--->
+  <script src="https://cdn.jsdelivr.net/npm/javascript"></script>
+  <style>
+    footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+
+</head>
+
+<body>
+  <header class="top-header" style="background-color: whitesmoke !important;">
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="index.html">
+        <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2019/06/organic-store-logo5.svg"
+          alt="logo" style="width:150px; height:70px;" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="everything.html" style="color: #000000;font-weight: bold;">Everything</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="groceries.html" style="color: #000000; font-weight: bold;">Groceries</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="juice.html" style="color: #000000; font-weight: bold;">Juice</a>
+          </li>
+        </ul>
+
+
+
+        <ul class="navbar-nav" style="margin-right: 15px !important;">
+          <li class="nav-item">
+            <a class="nav-link" href="about.html" style="color: #000000; font-weight: bold;">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactus.html" style="color: #000000; font-weight: bold;">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" id="openPopup"><i class="fa-solid fa-basket-shopping fa-lg"
+                style="color: #34c521"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span><i class="fa-solid fa-user fa-lg" style="color: #000000;"></i></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="login.html">
+                  <div class="d-flex align-items-center">
+                    <div class="">
+                      <i class="fa-solid fa-right-to-bracket"
+                        style="color: #000000; margin-bottom: 10px !important;"></i>
+                    </div>
+                    <p style="margin-left: 10px; margin-top: 10px !important;">LOGIN</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li>
+                <a class="dropdown-item" href="login.html">
+                  <div class="d-flex align-items-center">
+                    <div class="">
+                      <i class="fa-solid fa-circle-left fa-lg" style="color: #000000;"></i>
+                    </div>
+                    <p style="margin-left: 10px; margin-top: 10px !important;">LOG OUT</p>
+                  </div>
+                </a>
+              </li>
+
+            </ul>
+            <!------POPUP FOR BASKET-->
+            <div class="popup" id="myPopup">
+              <div class="popup-header">
+                <h2>Shopping Cart</h2>
+                <span class="close-button" id="closePopup">&times;</span>
+              </div>
+              <div class="popup-body">
+                <span>Your Cart is Empty</span>
+              </div>
+              <div class="popup-footer">
+                <button class="popupbtn" id="closePopupButton">Continue Shopping</button>
+              </div>
+            </div>
+
+          </li>
+        </ul>
+      </div>
+  </header>
+
+  <!----FOOTER-->
+  <footer>
+    <div class="container-fluid" style="padding: 0px 0px 0px 0px !important;">
+
+      <div class="footer-content" style="background-color: #000000; color: #ffffff; padding: 40px;">
+        <div class="footer-inner-content">
+          <div class="footer-top">
+            <div class="row">
+              <div class="col-sm-3">
+                <a href="www.google.com">
+                  <img
+                    src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2019/07/organic-store-white-logo.png"
+                    alt="logo" style="width:200px; height:75px;" />
+                </a>
+                <p style="margin-top: 20px;">Maecenas mi justo, interdum at consectetur vel,<br>tristique et arcu. Ut
+                  quis eros blandit, ultrices diam in,<br> elementum ex. Suspendisse quis faucibus urna.<br> Suspendisse
+                  pellentesque.</p>
+              </div>
+              <div class="col-sm-2">
+                <p style="font-size: 2rem;">Quick Links</p>
+                <div class="footer-menu">
+                  <ol class="menu-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Cart</a></li>
+                    <li><a href="#">Checkout</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Shop</a></li>
+                  </ol>
+                </div>
+
+              </div>
+              <div class="col-sm-2">
+                <div class="links">
+                  <div class="site-links">
+                    <p style="font-size: 2rem;">Site Links</p>
+                  </div>
+                  <div class="principles">
+                    <ol class="princ-links">
+                      <li><a href="#">Privacy Policy</a></li>
+                      <li><a href="#">Shipping Details</a></li>
+                      <li><a href="#">Offers Coupons</a></li>
+                      <li><a href="#">Terms & Conditions</a></li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <p style="font-size: 2rem;">Download Our Mobile App</p>
+                <p>Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit. Donec<br>aliquam gravida sollicitudin.
+                  Praesent<br> porta enim mi, non tincidunt libero<br> interdum sit amet.</p>
+              </div>
+              <div class="col-sm-2">
+                <div class="quick-links">
+                  <p style="font-size: 2rem;">Quick Links</p>
+                </div>
+                <div class="shortcut-links">
+                  <ol class="shrt-links">
+                    <li><a href="#" style="color: #34c521 !important;">Known More About Us</a></li>
+                    <li><a href="#" style="color: #34c521 !important;">Visit Store</a></li>
+                    <li><a href="#" style="color: #34c521 !important;">Let's Connect</a></li>
+                    <li><a href="#" style="color: #34c521 !important;">Locate Stores</a></li>
+                  </ol>
+                </div>
+                <div class="gallery-item" style="display:flex;">
+                  <img
+                    src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2019/06/play-store.png"
+                    alt="google play" width="150" height="50">
+                  <img src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2019/06/app-store.png"
+                    alt="app store" width="150" height="50" style="margin-left: 10px;">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+          <div class="footer-bottom">
+            <div class="footer-bottom-inner" style="padding: 10px;">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="copyright" style="display: flex; margin-left: 280px !important;">
+                        <p style=" border-right: 1px single solid #ffffff;">Copyright © 2024 </p> |
+                        <p> Organic Store</p>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin" style="color: #ffffff;"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

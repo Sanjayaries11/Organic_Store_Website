@@ -1,0 +1,220 @@
+/* .container{
+    background-image:url(https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2019/07/logo-leaf-new.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+} */
+body {
+  margin: 0;
+  padding: 0;
+  width: 99%;
+  font-size: 16px !important;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body ::selection {
+  background-color: #34c521;
+  color: #ffffff;
+}
+
+/*active menu*/
+.nav-link.active {
+  color: #34c521 !important;
+}
+
+
+/* Add hover effect to anchor links in navbar */
+.navbar-nav .nav-item a:hover i {
+  color: #34c521 !important;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item .badge {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  background-color: #000000;
+  color: #fff;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+
+/*hovering */
+.navbar-nav .nav-link {
+  position: relative;
+  color: #000000;
+}
+
+.navbar-nav .nav-link::before,
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link::before {
+  transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link::after {
+  transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::before,
+.navbar-nav .nav-link:hover::after {
+  width: 90%;
+  background-color: #34c521;
+}
+
+/* END HOVERING */
+
+.dropdown-menu {
+  background-color: wheat !important;
+  color: #ffffff !important;
+  margin-left: -115px !important;
+  margin-top: 10px !important;
+  width: 150px;
+  height: 150px;
+  padding: 10px !important;
+  z-index: 0.5;
+}
+
+/* Styles for the popup */
+.popup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 600px;
+  /* Adjust the width as needed */
+  height: 100%;
+  background-color: #ffffff;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-out;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+}
+
+.popup.open {
+  transform: translateX(0);
+}
+
+.popup-header {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popup-body {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.popup-footer {
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  text-align: right;
+}
+
+.popupbtn {
+  padding: 10px !important;
+  width: 100% !important;
+  color: #ffffff !important;
+  background-color: #34c521 !important;
+  border: #34c521 !important;
+  cursor: pointer !important;
+}
+
+.close-button {
+  cursor: pointer;
+  font-size: 40px;
+  /* Increase font size as needed */
+  padding: 10px;
+  /* Increase padding as needed */
+}
+
+
+.fruit {
+  padding: 30px;
+  box-shadow: 5px;
+  background-color: azure;
+  height: 350px;
+  width: 350px;
+  /* background-image: url("https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2019/06/product11-free-img.jpg"); */
+  background-position: contain;
+  background-repeat: no-repeat;
+}
+
+.vegetable {
+
+  padding: 30px;
+  background-color: azure;
+  height: 350px;
+  width: 350px;
+  /* background-image:url("https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2019/06/product13-free-img.jpg"); */
+  background-position: contain;
+  background-repeat: no-repeat;
+}
+
+.legium {
+
+  padding: 30px;
+  background-color: azure;
+  height: 350px;
+  width: 350px;
+  /* background-image: url("https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2019/06/product17-free-img.jpg"); */
+  background-position: contain;
+  background-repeat: no-repeat;
+}
+
+.review {
+  position: relative;
+}
+
+.review::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2019/06/logo-leaf2-free-img.png");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+
+ol li {
+  list-style-type: none !important;
+}
+
+ol li a {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+.shortcut-links ol li a {
+  color: #34c521;
+}
+
+.social-icons {
+  margin-left: 400px !important;
+}
+
+.footer-bottom a:hover i {
+  color: #34c521 !important;
+}
